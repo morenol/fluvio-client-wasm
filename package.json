@@ -1,8 +1,22 @@
 {
-  "author": "Infinyon Contributors <team@infiyon.com>",
-  "name": "fluvio-client-wasm",
-  "version": "0.1.0",
+  "author": "Infinyon Contributors <team@infinyon.com>",
+  "name": "@fluvio/client-wasm",
+  "version": "0.2.5",
+  "description": "WASM bindings for Fluvio distributed stream client",
+  "license": "Apache-2.0",
+  "keywords": [
+    "fluvio",
+    "stream",
+    "wasm",
+    "client"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infinyon/fluvio-client-wasm.git"
+  },
+  "homepage": "https://fluvio.io",
   "main": "dist/fluvio-client.js",
+  "types": "dist/fluvio-client.d.ts",
   "files": [
     "dist/"
   ],
@@ -14,18 +28,19 @@
     "test": "cargo test && wasm-pack test --headless"
   },
   "devDependencies": {
-    "@rollup/plugin-typescript": "^8.2.1",
-    "@wasm-tool/rollup-plugin-rust": "^1.0.7",
-    "@wasm-tool/wasm-pack-plugin": "^1.1.0",
-    "copy-webpack-plugin": "^9.0.1",
+    "@rollup/plugin-typescript": "^8.3.2",
+    "@wasm-tool/rollup-plugin-rust": "^2.2.0",
+    "@wasm-tool/wasm-pack-plugin": "^1.6.0",
+    "copy-webpack-plugin": "^10.2.4",
     "rimraf": "^3.0.0",
-    "rollup": "^2.53.2",
-    "rollup-plugin-dts": "3",
-    "tslib": "^2.2.0",
-    "typescript": "4",
-    "wasm-pack": "^0.10.0",
-    "webpack": "^5.46.0",
-    "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2"
-  }
+    "rollup": "^2.70.2",
+    "rollup-plugin-dts": "^4.2",
+    "tslib": "^2.4.0",
+    "typescript": "^4.6.3",
+    "wasm-pack": "^0.10.1",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1"
+  },
+  "packageManager": "yarn@3.1.1"
 }
