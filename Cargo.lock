@@ -488,7 +488,7 @@ dependencies = [
  "event-listener",
  "fluvio-compression",
  "fluvio-dataplane-protocol",
- "fluvio-future",
+ "fluvio-future 0.3.18",
  "fluvio-protocol",
  "fluvio-sc-schema",
  "fluvio-socket",
@@ -517,7 +517,7 @@ dependencies = [
  "console_error_panic_hook",
  "console_log",
  "fluvio",
- "fluvio-future",
+ "fluvio-future 0.4.0",
  "futures-util",
  "js-sys",
  "log",
@@ -554,7 +554,7 @@ dependencies = [
  "async-trait",
  "base64",
  "fluvio-dataplane-protocol",
- "fluvio-future",
+ "fluvio-future 0.3.18",
  "fluvio-protocol",
  "fluvio-stream-model",
  "fluvio-types",
@@ -575,7 +575,7 @@ dependencies = [
  "crc32c",
  "eyre",
  "fluvio-compression",
- "fluvio-future",
+ "fluvio-future 0.3.18",
  "fluvio-protocol",
  "flv-util",
  "futures-util",
@@ -587,9 +587,9 @@ dependencies = [
 
 [[package]]
 name = "fluvio-future"
-version = "0.3.16"
+version = "0.3.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e4391dfc45967422482f128c2e3c44f0aded28ac64f3d9cf50a2a476ef37fee0"
+checksum = "1e2d1fad8e412d44c516add2349a34f6d71d9279b108c8e012325ab17fcbf982"
 dependencies = [
  "async-io",
  "async-net",
@@ -609,13 +609,31 @@ dependencies = [
 ]
 
 [[package]]
+name = "fluvio-future"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1c5cd00d18863c3e95c7adeeefa35a27b9482abb987dc0c293215334e4f3fd69"
+dependencies = [
+ "async-net",
+ "async-trait",
+ "cfg-if",
+ "fluvio-wasm-timer",
+ "futures-lite",
+ "futures-util",
+ "log",
+ "thiserror",
+ "tracing",
+ "ws_stream_wasm",
+]
+
+[[package]]
 name = "fluvio-protocol"
 version = "0.7.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7460c0d9256be1ec86a8b4004ed768fd78206d9ff0134b1003c9b69896609ffc"
 dependencies = [
  "bytes",
- "fluvio-future",
+ "fluvio-future 0.3.18",
  "fluvio-protocol-derive",
  "tokio-util",
  "tracing",
@@ -662,7 +680,7 @@ dependencies = [
  "bytes",
  "cfg-if",
  "event-listener",
- "fluvio-future",
+ "fluvio-future 0.3.18",
  "fluvio-protocol",
  "futures-util",
  "once_cell",
