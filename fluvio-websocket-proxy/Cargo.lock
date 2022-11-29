@@ -764,7 +764,7 @@ dependencies = [
  "event-listener",
  "fluvio-compression",
  "fluvio-dataplane-protocol",
- "fluvio-future",
+ "fluvio-future 0.3.18",
  "fluvio-protocol",
  "fluvio-sc-schema",
  "fluvio-socket",
@@ -806,7 +806,7 @@ dependencies = [
  "async-trait",
  "base64",
  "fluvio-dataplane-protocol",
- "fluvio-future",
+ "fluvio-future 0.3.18",
  "fluvio-protocol",
  "fluvio-stream-model",
  "fluvio-types",
@@ -827,7 +827,7 @@ dependencies = [
  "crc32c",
  "eyre",
  "fluvio-compression",
- "fluvio-future",
+ "fluvio-future 0.3.18",
  "fluvio-protocol",
  "flv-util",
  "futures-util",
@@ -839,9 +839,9 @@ dependencies = [
 
 [[package]]
 name = "fluvio-future"
-version = "0.3.16"
+version = "0.3.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e4391dfc45967422482f128c2e3c44f0aded28ac64f3d9cf50a2a476ef37fee0"
+checksum = "1e2d1fad8e412d44c516add2349a34f6d71d9279b108c8e012325ab17fcbf982"
 dependencies = [
  "async-io",
  "async-net",
@@ -861,13 +861,31 @@ dependencies = [
 ]
 
 [[package]]
+name = "fluvio-future"
+version = "0.4.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1c2f719aca3883ed31553c51bcf3cab241de66ed9821da4f86837f7d983569da"
+dependencies = [
+ "async-net",
+ "async-trait",
+ "cfg-if",
+ "fluvio-wasm-timer",
+ "futures-lite",
+ "futures-util",
+ "log",
+ "thiserror",
+ "tracing",
+ "ws_stream_wasm",
+]
+
+[[package]]
 name = "fluvio-protocol"
 version = "0.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "73080c7f3ffdc6443f52aadcd71f98f8d229289db5741790221419ad1f8d071f"
 dependencies = [
  "bytes",
- "fluvio-future",
+ "fluvio-future 0.3.18",
  "fluvio-protocol-derive",
  "tokio-util",
  "tracing",
@@ -914,7 +932,7 @@ dependencies = [
  "bytes",
  "cfg-if",
  "event-listener",
- "fluvio-future",
+ "fluvio-future 0.3.18",
  "fluvio-protocol",
  "futures-util",
  "once_cell",
@@ -986,7 +1004,7 @@ dependencies = [
  "async-std",
  "env_logger",
  "fluvio",
- "fluvio-future",
+ "fluvio-future 0.4.3",
  "serde",
  "tide",
  "tide-websockets",
